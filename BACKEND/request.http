@@ -1,6 +1,6 @@
 ###
 get http://localhost:3000/user-api/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hZGh1QyIsImlhdCI6MTcyMTk3MDY3NSwiZXhwIjoxNzIyMDU3MDc1fQ.tj2AHr84pJoMnpSBg8skxrZy1y105u3R-5H1JxBvcGY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhdmkiLCJpYXQiOjE3MjU4MTgwOTUsImV4cCI6MTcyNTkwNDQ5NX0.l2BT9-rjwsZanWTRwx_8QeOQNjPeCu0w05Ix13xEZ4o
 ###
 
 ###
@@ -9,15 +9,14 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hZ
 ###
 
 ###
-post http://localhost:3000/user-api/users
+post http://localhost:3000/user-api/applicants
 Content-Type: application/json
 
 {
     "name": "ravi",
     "username": "ravi",
     "password": "ravi",
-    "email": "ravi@gmail.com",
-    "products":[]
+    "email": "ravi@gmail.com"
 }
 ###
 
@@ -26,13 +25,13 @@ post http://localhost:3000/user-api/login
 Content-Type: application/json
 
 {
-    "username": "madhuCab",
-    "password": "madhuSC"   
+    "username": "ravi",
+    "password": "ravi"
 }
 ###
 
 ###
-put http://localhost:3000/user-api/users/2
+put http://localhost:3000/user-api/users/madhuSC
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hZGh1U0MiLCJpYXQiOjE3MjA4Njc0ODksImV4cCI6MTcyMDk1Mzg4OX0.6saMslggbI-TxmXaCJ5JynVDOZ-JBEuT_wjzMfgkPnI
 
@@ -41,38 +40,60 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hZ
     "username": "madhuSC",
     "password": "madhuSC",
     "email": "madhu@gmail.com",
-    "products":[]
 }
 ###
 
 ###
-delete http://localhost:3000/user-api/users/2
+delete http://localhost:3000/user-api/users/madhuSC
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hZGh1U0MiLCJpYXQiOjE3MjA4Njc0ODksImV4cCI6MTcyMDk1Mzg4OX0.6saMslggbI-TxmXaCJ5JynVDOZ-JBEuT_wjzMfgkPnI
 ###
 
-
-//send  request to  get all the products
-get http://localhost:3000/product-api/products
-
-
+###
+get http://localhost:3000/jobs-api/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhdmkiLCJpYXQiOjE3MjU4MTgwOTUsImV4cCI6MTcyNTkwNDQ5NX0.l2BT9-rjwsZanWTRwx_8QeOQNjPeCu0w05Ix13xEZ4o
+###
 
 ###
-//request to get product by id
-get http://localhost:3000/product-api/products/10
-
-
-
+get http://localhost:3000/jobs-api/640f1b8499cde7764b85b563
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hZGh1U0MiLCJpYXQiOjE3MjA4Njc0ODksImV4cCI6MTcyMDk1Mzg4OX0.6saMslggbI-TxmXaCJ5JynVDOZ-JBEuT_wjzMfgkPnI
+###
 
 ###
-put http://localhost:3000/user-api/add-to-cart/ravi
+post http://localhost:3000/jobs-api/
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhdmkiLCJpYXQiOjE3MjU4MTgwOTUsImV4cCI6MTcyNTkwNDQ5NX0.l2BT9-rjwsZanWTRwx_8QeOQNjPeCu0w05Ix13xEZ4o
 
 {
-    "products":{
-       "id":1,
-       "title":"Essence Mascara Lash Princess",
-       "description":"The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
-       "category":"beauty",
-       "price":9.99
-    }
+    "title": "Software Engineer",
+    "description": "Responsible for developing software solutions",
+    "location": "Hyderabad",
+    "salary": "10 LPA"
 }
+###
+
+###
+delete http://localhost:3000/jobs-api/640f1b8499cde7764b85b563
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hZGh1U0MiLCJpYXQiOjE3MjA4Njc0ODksImV4cCI6MTcyMDk1Mzg4OX0.6saMslggbI-TxmXaCJ5JynVDOZ-JBEuT_wjzMfgkPnI
+###
+
+###
+post http://localhost:3000/applications-api/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhdmkiLCJpYXQiOjE3MjU4MTgwOTUsImV4cCI6MTcyNTkwNDQ5NX0.l2BT9-rjwsZanWTRwx_8QeOQNjPeCu0w05Ix13xEZ4o
+
+{
+    "jobId": "640f1b8499cde7764b85b563",
+    "username": "madhuSC",
+    "resume": "http://example.com/resume.pdf"
+}
+###
+
+###
+get http://localhost:3000/applications-api/madhuSC
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhdmkiLCJpYXQiOjE3MjU4MTgwOTUsImV4cCI6MTcyNTkwNDQ5NX0.l2BT9-rjwsZanWTRwx_8QeOQNjPeCu0w05Ix13xEZ4o
+###
+
+###
+delete http://localhost:3000/applications-api/641f0d8499cde7764b85b56f
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hZGh1U0MiLCJpYXQiOjE3MjA4Njc0ODksImV4cCI6MTcyMDk1Mzg4OX0.6saMslggbI-TxmXaCJ5JynVDOZ-JBEuT_wjzMfgkPnI
+###
