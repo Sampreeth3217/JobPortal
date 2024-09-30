@@ -4,7 +4,7 @@ import './ProfilePage.css'; // Import CSS for styling
 const ProfilePage = () => {
   return (
     <div className="profile-page_profile-page">
-      {/* Sidebar with Logo, Display Picture, and Personal Details */}
+      
       <div className="sidebar_profile-page">
         <div className="display-picture_profile-page">
           <h3>Display Picture</h3>
@@ -13,15 +13,12 @@ const ProfilePage = () => {
           <h3>Personal Details</h3>
         </div>
       </div>
-
-      {/* Main Content Area with Technical Details and Previous Applications */}
-      
+          
       <div className='main-content_profile-page'>
       <div className="main-content_profile-page_1">
         <div className="technical-details_profile-page">
           <h3>Technical Details</h3>
         </div>
-        
       </div>
       <div className="main-content_profile-page_2">
         <div className="technical-details_profile-page">
@@ -32,5 +29,4 @@ const ProfilePage = () => {
     </div>
   );
 };
-
 export default ProfilePage;
